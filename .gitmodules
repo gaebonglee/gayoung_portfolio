@@ -2,3 +2,9 @@
 	path = exchangeCurrency
 	url = https://github.com/gaebonglee/exchangeCurrency.git
 
+[submodule "public/kurly"]
+	path = public/kurly
+	url = https://github.com/gaebonglee/kurly.git
+[submodule "public/toDoList"]
+	path = public/toDoList
+	url = https://github.com/gaebonglee/toDoList.git
