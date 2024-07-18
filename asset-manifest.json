@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/gayoung_portfolio/static/css/main.f855e6bc.css",
-    "main.js": "/gayoung_portfolio/static/js/main.535644d4.js",
+    "main.css": "/gayoung_portfolio/static/css/main.d95bb321.css",
+    "main.js": "/gayoung_portfolio/static/js/main.7e9bac10.js",
     "static/js/453.ddeccfba.chunk.js": "/gayoung_portfolio/static/js/453.ddeccfba.chunk.js",
-    "static/media/logo.svg": "/gayoung_portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/gayoung_portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/gayoung_portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/gayoung_portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/gayoung_portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/gayoung_portfolio/index.html",
-    "main.f855e6bc.css.map": "/gayoung_portfolio/static/css/main.f855e6bc.css.map",
-    "main.535644d4.js.map": "/gayoung_portfolio/static/js/main.535644d4.js.map",
+    "main.d95bb321.css.map": "/gayoung_portfolio/static/css/main.d95bb321.css.map",
+    "main.7e9bac10.js.map": "/gayoung_portfolio/static/js/main.7e9bac10.js.map",
     "453.ddeccfba.chunk.js.map": "/gayoung_portfolio/static/js/453.ddeccfba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.535644d4.js"
+    "static/css/main.d95bb321.css",
+    "static/js/main.7e9bac10.js"
   ]
 }
