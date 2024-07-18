@@ -62,7 +62,7 @@ const projects = [
     mywork: "HTML 마크업, CSS 스타일링",
     image: `${process.env.PUBLIC_URL}/image/project/kurlyHeader.png`,
     projectLink:
-      "https://gaebonglee.github.io/myportfolio/kurly/kurlyHeader/kurlyHeader.html",
+      "https://gaebonglee.github.io/gayoung_portfolio/kurly/kurlyHeader/kurlyHeader.html",
     githubLink: "https://github.com/gaebonglee/kurly.git",
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     tech: "HTML5, CSS3, JavaScript",
     mywork: "HTML 마크업, CSS 스타일링, JavaScript 기능구현",
     image: `${process.env.PUBLIC_URL}/image/project/kurlyProductTimer.png`,
-    projectLink: `https://gaebonglee.github.io/myportfolio/kurly/timerProduct/timerProduct.html`,
+    projectLink: `https://gaebonglee.github.io/gayoung_portfolio/kurly/timerProduct/timerProduct.html`,
     githubLink: "https://github.com/gaebonglee/kurly.git",
   },
   {
@@ -84,7 +84,7 @@ const projects = [
     mywork: "HTML 마크업, CSS 스타일링, JavaScript 기능구현",
     image: `${process.env.PUBLIC_URL}/image/project/kurlyCategory.png`,
     projectLink:
-      "https://gaebonglee.github.io/myportfolio/kurly/kurlyCategory/category.html",
+      "https://gaebonglee.github.io/gayoung_portfolio/kurly/kurlyCategory/category.html",
     githubLink: "https://github.com/gaebonglee/kurly.git",
   },
   {
@@ -95,7 +95,7 @@ const projects = [
     mywork: "HTML 마크업, CSS 스타일링, JavaScript 기능구현",
     image: `${process.env.PUBLIC_URL}/image/project/todolist.png`,
     projectLink:
-      "https://gaebonglee.github.io/myportfolio/toDoList/myToDoList.html",
+      "https://gaebonglee.github.io/gayoung_portfolio/toDoList/myToDoList.html",
     githubLink: "https://github.com/gaebonglee/toDoList.git",
   },
 ];
