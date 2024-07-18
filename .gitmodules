@@ -1,9 +1,4 @@
 [submodule "exchangeCurrency"]
 	path = exchangeCurrency
 	url = https://github.com/gaebonglee/exchangeCurrency.git
-[submodule "toDoList"]
-	path = toDoList
-	url = https://github.com/gaebonglee/toDoList.git
-[submodule "kurly"]
-	path = kurly
-	url = https://github.com/gaebonglee/kurly.git
+
