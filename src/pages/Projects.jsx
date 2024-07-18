@@ -40,8 +40,8 @@ const projects = [
     tech: "React, Scss, react-hook, react-slick",
     mywork: "Design, Front-end",
     image: `${process.env.PUBLIC_URL}/image/project/myportfolio.png`,
-    projectLink: "https://gaebonglee.github.io/myportfolio/",
-    githubLink: "https://github.com/gaebonglee/myportfolio.git",
+    projectLink: "https://gaebonglee.github.io/gayoung_portfolio/",
+    githubLink: "https://github.com/gaebonglee/gayoung_portfolio.git",
   },
   {
     title: "Exchange Currency",
@@ -51,7 +51,7 @@ const projects = [
     mywork: "HTML 마크업, CSS 스타일링, JavaScript 기능구현",
     image: `${process.env.PUBLIC_URL}/image/project/exchange_currency.png`,
     projectLink:
-      "https://gaebonglee.github.io/myportfolio/exchangeCurrency/index.html",
+      "https://gaebonglee.github.io/gayoung_portfolio/exchangeCurrency/index.html",
     githubLink: "https://github.com/gaebonglee/exchangeCurrency.git",
   },
   {
