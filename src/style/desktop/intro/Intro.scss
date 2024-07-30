@@ -1,0 +1,30 @@
+@import "../../common.scss";
+
+.IntroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.nextButton {
+  cursor: pointer;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  transition: 0.15s;
+
+  &:hover {
+    color: $neonblue1;
+    background-color: $neongreen;
+  }
+}

@@ -1,0 +1,121 @@
+@import "../../common.scss";
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 10rem; // 필요에 따라 글꼴 크기 조정
+    display: flex;
+  }
+
+  span {
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    animation: slideInUp 0.5s forwards;
+  }
+
+  h1:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  h1:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  h1:nth-child(1) span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  h1:nth-child(1) span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  h1:nth-child(1) span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  h1:nth-child(1) span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  h1:nth-child(2) span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  h1:nth-child(2) span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  h1:nth-child(2) span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  h1:nth-child(2) span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  h1:nth-child(2) span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  h1:nth-child(2) span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  h1:nth-child(2) span:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  h1:nth-child(2) span:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  h1:nth-child(2) span:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  h1:nth-child(2) span:nth-child(10) {
+    animation-delay: 1s;
+  }
+
+  h1:nth-child(3) span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  h1:nth-child(3) span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  h1:nth-child(3) span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  h1:nth-child(3) span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  h1:nth-child(3) span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  h1:nth-child(3) span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  h1:nth-child(3) span:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  h1:nth-child(3) span:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  h1:nth-child(3) span:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  h1:nth-child(3) span:nth-child(10) {
+    animation-delay: 1s;
+  }
+  h1:nth-child(3) span:nth-child(11) {
+    animation-delay: 1.1s;
+  }
+  h1:nth-child(3) span:nth-child(12) {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes slideInUp {
+    from {
+      top: 20px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
