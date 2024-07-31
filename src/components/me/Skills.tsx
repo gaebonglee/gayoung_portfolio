@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
     },
     {
       name: "JavaScript",
-      level: 65,
+      level: 70,
       image: `${process.env.PUBLIC_URL}/image/aboutme/javascript_logo.png`,
     },
     {
@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
     },
     {
       name: "GitHub",
-      level: 75,
+      level: 80,
       image: `${process.env.PUBLIC_URL}/image/aboutme/github_logo.png`,
     },
   ];

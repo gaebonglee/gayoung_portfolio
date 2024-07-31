@@ -1,1 +1,18 @@
 @import "../../common.scss";
+
+.introTextSection {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  animation: textUp 1s forwards;
+}
+
+@keyframes textUp {
+  from {
+    height:75%;
+  }
+  to {
+    height: 98%;
+  }
+}
