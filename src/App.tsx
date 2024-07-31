@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
-import DrawingLines from "./components/me/DrawingLines";
+import Me from "./pages/Me";
+
 // import Background from "./components/Background";
 // import Intro from "./pages/Intro";
 // import AboutMe from "./pages/AboutMe";
@@ -17,7 +18,7 @@ const App: React.FC = () => {
         <Projects />
       </div> */}
       {/* <IntroPage /> */}
-      <DrawingLines />
+      <Me /> 
     </div>
   );
 };

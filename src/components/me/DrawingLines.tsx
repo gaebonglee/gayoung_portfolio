@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../style/desktop/me/DrawingLines.scss";
 
 const DrawingLines: React.FC = () => {
