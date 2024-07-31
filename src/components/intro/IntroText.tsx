@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/desktop/intro/IntroText.scss";
 
-const introText: React.FC = () => {
+const IntroText: React.FC = () => {
   return (
     <div className="textWrap">
       <h1>
@@ -43,4 +43,4 @@ const introText: React.FC = () => {
   );
 };
 
-export default introText;
+export default IntroText;
