@@ -1,15 +1,15 @@
 .imogeSection {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5%;
+  top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .cards {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     perspective: 1000px;
   }
 

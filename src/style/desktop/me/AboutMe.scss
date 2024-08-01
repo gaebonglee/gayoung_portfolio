@@ -1,0 +1,60 @@
+.aboutMeSection {
+  margin: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.introWrap {
+  max-width: 700px;
+}
+
+.textWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #fff;
+
+  .introWrap {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.lineShape {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+@media (max-width: 1200px) {
+  .imageWrap {
+    left: 10rem;
+    width: 15rem;
+    height: 15rem;
+  }
+  .textWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageWrap {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .textWrap {
+    padding: 1rem;
+    border: none;
+  }
+  .introWrap {
+    max-width: 100%;
+  }
+}
