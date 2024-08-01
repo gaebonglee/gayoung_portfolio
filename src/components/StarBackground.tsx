@@ -4,9 +4,9 @@ import "../style/desktop/StarBackground.scss";
 
 const StarBackground: React.FC = () => {
   useEffect(() => {
-    gsap.to("#stars", { y: -2000, duration: 50, ease: "none", repeat: -1 });
-    gsap.to("#stars2", { y: -2000, duration: 100, ease: "none", repeat: -1 });
-    gsap.to("#stars3", { y: -2000, duration: 150, ease: "none", repeat: -1 });
+    gsap.to("#stars", { y: -2000, duration: 100, ease: "none", repeat: -1 });
+    gsap.to("#stars2", { y: -2000, duration: 250, ease: "none", repeat: -1 });
+    gsap.to("#stars3", { y: -2000, duration: 500, ease: "none", repeat: -1 });
   }, []);
 
   return (

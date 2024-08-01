@@ -3,7 +3,6 @@
   src: url("../../../../assets/BladeLogicDemoRegular-ALnVD.otf")
     format("opentype");
   font-weight: normal;
-  font-style: normal;
 }
 
 .skills_container {
@@ -30,8 +29,9 @@
   padding: 1.5rem 1rem;
   .skillTitle {
     font-family: "BladeLogicDemoRegular", sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
+    transform: skewX(-10deg); // 텍스트 기울이기
   }
 }
 
