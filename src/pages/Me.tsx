@@ -21,12 +21,11 @@ const Me: React.FC = () => {
       </div>
       <div className="footer">
         <Info />
+        <AboutMeNext />
       </div>
       {/* <DrawingLines /> */}
       {/* <Imoge />
-      <IntroText />
-      
-      <AboutMeNext /> */}
+      <IntroText />*/}
     </div>
   );
 };

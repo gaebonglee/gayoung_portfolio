@@ -1,6 +1,8 @@
 @import "../../common.scss";
 
 .AboutMeButton {
+  position: relative;
+  display: inline-block;
   cursor: pointer;
   margin-top: auto;
   margin-bottom: 20px;
@@ -10,12 +12,24 @@
   font-size: 1.3rem;
   font-weight: 600;
   padding: 1rem 2rem;
+  overflow: hidden;
   transition: 0.15s;
-  position: absolute;
-  top: 55%; 
-  right: 15%;
-  &:hover {
-    color: $neonblue1;
-    background-color: $neongreen;
+  z-index: 1;
+
+  .word {
+    display: inline-block;
+    position: relative;
+    transition: all 0.15s ease;
+    text-align: center;
+    
+  }
+
+  .whiteSpace {
+    display: inline-block;
+    width: 1rem; 
+  }
+
+  &:hover .word {
+    transition: none; 
   }
 }

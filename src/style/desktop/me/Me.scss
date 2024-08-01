@@ -4,19 +4,24 @@
   flex-direction: column;
   position: relative;
   width: 100%;
+
   .header {
     display: flex;
     justify-content: end;
   }
+
   .body {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .footer {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
+    gap: 2rem; 
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Me from "./pages/Me";
+import StarBackground from "./components/StarBackground";
 
 // import Background from "./components/Background";
 // import Intro from "./pages/Intro";
@@ -11,6 +12,7 @@ import Me from "./pages/Me";
 const App: React.FC = () => {
   return (
     <div className="Portfolio_container">
+      <StarBackground />
       {/* <Background />
       <div className="PortfolioContent_container">
         <Intro />
@@ -18,7 +20,7 @@ const App: React.FC = () => {
         <Projects />
       </div> */}
       {/* <IntroPage /> */}
-      <Me /> 
+      <Me />
     </div>
   );
 };
