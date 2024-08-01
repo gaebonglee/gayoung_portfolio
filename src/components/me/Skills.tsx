@@ -44,10 +44,11 @@ const Skills: React.FC = () => {
       image: `${process.env.PUBLIC_URL}/image/aboutme/github_logo.png`,
     },
   ];
+
   return (
     <section className="skills_container">
       <div className="textContent">
-        <a>Skills</a>
+        <a className="skillTitle">SKILLS</a>
       </div>
       <div className="skills_wrap">
         {skills.map((skill, index) => (

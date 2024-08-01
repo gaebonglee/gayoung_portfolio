@@ -4,7 +4,7 @@ import "../../style/desktop/button/AboutMeNext.scss";
 const AboutMeNext: React.FC = () => {
   const [text, setText] = useState<string>("NEXT PAGE");
   const [originalText, setOriginalText] = useState<string>("NEXT PAGE");
-  const [hovered, setHovered] = useState<boolean>(false); // hover 상태를 추적
+  const [hovered, setHovered] = useState<boolean>(false);
 
   const randomChar = () => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#%$*&";
@@ -20,17 +20,16 @@ const AboutMeNext: React.FC = () => {
 
   const handleMouseOver = () => {
     if (!hovered) {
-      // hover 상태가 아니면 실행
-      setHovered(true); // hover 상태로 설정
+      setHovered(true);
       const interval = setInterval(() => {
         setText(randomizeText(originalText));
-      }, 250);
+      }, 100);
 
       setTimeout(() => {
         clearInterval(interval);
         setText(originalText);
-        setHovered(false); // hover 상태 해제
-      }, 2000);
+        setHovered(false);
+      }, 1500);
     }
   };
 
