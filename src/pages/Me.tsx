@@ -16,7 +16,7 @@ const Me: React.FC = () => {
         <Github />
       </div>
       <div className="body">
-        <AboutMe />
+         <AboutMe />
         <Skills />
       </div>
       <div className="footer">

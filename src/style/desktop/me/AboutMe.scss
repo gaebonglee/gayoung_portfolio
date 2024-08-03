@@ -4,22 +4,16 @@
   position: relative;
 }
 
-.introWrap {
-  max-width: 700px;
-}
-
 .textWrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   position: relative;
   padding: 1rem 2rem;
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid #fff;
 
-  .introWrap {
+  .scramble {
     width: 100%;
+    max-width: 700px;
     text-align: left;
   }
 }
