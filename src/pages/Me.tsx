@@ -12,11 +12,11 @@ import Github from "../components/me/Github";
 const Me: React.FC = () => {
   return (
     <div className="me_container">
-      <div className="header">
+      {/* <div className="header">
         <Github />
-      </div>
+      </div> */}
       <div className="body">
-         <AboutMe />
+        <AboutMe />
         <Skills />
       </div>
       <div className="footer">

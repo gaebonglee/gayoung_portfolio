@@ -48,6 +48,17 @@ const Skills: React.FC = () => {
   return (
     <section className="skills_container">
       <div className="textContent">
+        <section className="githubSection">
+          <div className="line">
+            <a
+              href="https://github.com/gaebonglee"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB
+            </a>
+          </div>
+        </section>
         <a className="skillTitle">SKILLS</a>
       </div>
       <div className="skills_wrap">
