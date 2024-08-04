@@ -42,8 +42,22 @@ const AboutMe: React.FC = () => {
 
   return (
     <section className="aboutMeSection">
-      <div className="introWrap">
-        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <div className="aboutMeContainer">
+        <div className="introWrap">
+          <div dangerouslySetInnerHTML={{ __html: content }}></div>
+        </div>
+        <svg className="lineShape MeBottomLine" viewBox="0 0 400 40">
+          <defs>
+            <filter id="neon">
+              <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <polyline points="0,0 50,20 400,20" className="neonLine" />
+        </svg>
       </div>
     </section>
   );

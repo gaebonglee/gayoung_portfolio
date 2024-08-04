@@ -33,7 +33,7 @@
     stroke-width: 2;
     filter: url(#neon);
 
-    &.topLine {
+    &.InfoTopLine {
       position: absolute;
       top: -1rem;
       left: 0;
@@ -41,7 +41,7 @@
       height: 40px;
     }
 
-    &.bottomLine {
+    &.InfoBottomLine {
       position: absolute;
       bottom: 0;
       left: 12rem;
@@ -52,7 +52,7 @@
     .neonLine {
       stroke-dasharray: 300;
       stroke-dashoffset: 300;
-      animation: drawLine 3s ease-in-out forwards,
+      animation: drawLine 2s ease-in-out forwards,
         neonGlow 1.5s ease-in-out infinite alternate;
     }
   }

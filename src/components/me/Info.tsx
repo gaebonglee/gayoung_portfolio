@@ -34,7 +34,7 @@ const Info: React.FC = () => {
         <div className="infoText_wrap">
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </div>
-        <svg className="lineShape topLine" viewBox="0 0 200 50">
+        <svg className="lineShape InfoTopLine" viewBox="0 0 200 50">
           <defs>
             <filter id="neon">
               <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
@@ -46,7 +46,7 @@ const Info: React.FC = () => {
           </defs>
           <polyline points="0,20 50,0 300,0" className="neonLine" />
         </svg>
-        <svg className="lineShape bottomLine" viewBox="0 0 200 50">
+        <svg className="lineShape InfoBottomLine" viewBox="0 0 200 50">
           <defs>
             <filter id="neon">
               <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
