@@ -35,10 +35,28 @@ const Info: React.FC = () => {
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </div>
         <svg className="lineShape topLine" viewBox="0 0 200 50">
-          <polyline points="0,50 50,0 200,0" />
+          <defs>
+            <filter id="neon">
+              <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <polyline points="0,20 50,0 300,0" className="neonLine" />
         </svg>
         <svg className="lineShape bottomLine" viewBox="0 0 200 50">
-          <polyline points="0,0 150,0 200,50" />
+          <defs>
+            <filter id="neon">
+              <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <polyline points="0,0 150,0 200,50" className="neonLine" />
         </svg>
       </div>
     </section>

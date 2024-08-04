@@ -1,5 +1,5 @@
 .me_container {
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -11,7 +11,7 @@
   // }
 
   .body {
-    margin: 2rem 0;
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,6 @@
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    gap: 2rem; 
+    gap: 1rem; 
   }
 }

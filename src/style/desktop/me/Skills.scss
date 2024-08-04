@@ -8,8 +8,6 @@
 .skills_container {
   margin: 1rem;
   padding: 1rem;
-  border-radius: 10px;
-  border: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +15,8 @@
 
 .skills_wrap {
   display: grid;
+  border: 2px solid white;
+  border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   width: 100%;
@@ -46,7 +46,6 @@
     font-family: "BladeLogicDemoRegular", sans-serif;
     font-size: 2.3rem;
     color: white;
-    transform: skewX(-10deg);
     align-content: center;
   }
 }

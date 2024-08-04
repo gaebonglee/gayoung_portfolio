@@ -7,14 +7,10 @@ import IntroText from "../components/me/IntroText";
 import Info from "../components/me/Info";
 import Imoge from "../components/me/Imoge";
 import AboutMe from "../components/me/AboutMe";
-import Github from "../components/me/Github";
 
 const Me: React.FC = () => {
   return (
     <div className="me_container">
-      {/* <div className="header">
-        <Github />
-      </div> */}
       <div className="body">
         <AboutMe />
         <Skills />
