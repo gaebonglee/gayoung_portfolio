@@ -7,7 +7,7 @@ const Intro: React.FC = () => {
   return (
     <section className="IntroSection">
       <IntroText />
-      <IntroNext />
+      {/* <IntroNext /> */}
     </section>
   );
 };

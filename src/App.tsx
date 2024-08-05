@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <Projects />
       </div> */}
       <IntroPage />
-      {/* <Me /> */}
+      <Me />
     </div>
   );
 };

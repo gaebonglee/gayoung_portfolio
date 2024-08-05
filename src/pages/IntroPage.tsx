@@ -6,7 +6,7 @@ const IntroPage: React.FC = () => {
   return (
     <div className="IntroPage">
       <Intro />
-      <Menubar />
+      {/* <Menubar /> */}
     </div>
   );
 };

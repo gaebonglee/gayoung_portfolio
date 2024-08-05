@@ -1,121 +1,52 @@
 @import "../../common.scss";
 
+@font-face {
+  font-family: "BladeLogicDemoRegular";
+  src: url("../../../../assets/BladeLogicDemoRegular-ALnVD.otf")
+    format("opentype");
+  font-weight: normal;
+}
+
 .textWrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  overflow: hidden;
-  
+  transition: all 0.5s ease-in-out;
+
   h1 {
+    font-family: "BladeLogicDemoRegular", sans-serif;
+    color: white;
     margin: 0;
     font-size: 9rem;
     display: flex;
-  }
-
-  span {
     position: relative;
-    top: 20px;
-    opacity: 0;
-    animation: slideInUp 0.5s forwards;
+    transition: all 0.5s ease-in-out;
   }
 
-  h1:nth-child(1) span:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  h1:nth-child(1) span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  h1:nth-child(1) span:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  h1:nth-child(1) span:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  h1:nth-child(1) span:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  h1:nth-child(1) span:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-
-  h1:nth-child(2) span:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  h1:nth-child(2) span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  h1:nth-child(2) span:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  h1:nth-child(2) span:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  h1:nth-child(2) span:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  h1:nth-child(2) span:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-  h1:nth-child(2) span:nth-child(7) {
-    animation-delay: 0.7s;
-  }
-  h1:nth-child(2) span:nth-child(8) {
-    animation-delay: 0.8s;
-  }
-  h1:nth-child(2) span:nth-child(9) {
-    animation-delay: 0.9s;
-  }
-  h1:nth-child(2) span:nth-child(10) {
-    animation-delay: 1s;
-  }
-
-  h1:nth-child(3) span:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  h1:nth-child(3) span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  h1:nth-child(3) span:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  h1:nth-child(3) span:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  h1:nth-child(3) span:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  h1:nth-child(3) span:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-  h1:nth-child(3) span:nth-child(7) {
-    animation-delay: 0.7s;
-  }
-  h1:nth-child(3) span:nth-child(8) {
-    animation-delay: 0.8s;
-  }
-  h1:nth-child(3) span:nth-child(9) {
-    animation-delay: 0.9s;
-  }
-  h1:nth-child(3) span:nth-child(10) {
-    animation-delay: 1s;
-  }
-  h1:nth-child(3) span:nth-child(11) {
-    animation-delay: 1.1s;
-  }
-  h1:nth-child(3) span:nth-child(12) {
-    animation-delay: 1.2s;
-  }
-
-  @keyframes slideInUp {
-    from {
-      top: 20px;
-      opacity: 0;
-    }
-    to {
-      top: 0;
-      opacity: 1;
+  &.scrolled {
+    h1 {
+      &:before,
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:before {
+        clip-path: polygon(0 0, 100% 0, 50% 50%);
+        color: white; // 위쪽 부분
+      }
+      &:after {
+        clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+        color: white; // 아래쪽 부분
+      }
     }
   }
 }
