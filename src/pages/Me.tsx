@@ -11,17 +11,19 @@ import AboutMe from "../components/me/AboutMe";
 const Me: React.FC = () => {
   return (
     <div className="me_container">
-      <div className="body">
-        <AboutMe />
-        <Skills />
-      </div>
-      <div className="footer">
-        <Info />
-        <AboutMeNext />
-      </div>
-      {/* <DrawingLines /> */}
-      {/* <Imoge />
+      <div className="meContentsWrap">
+        <div className="body">
+          <AboutMe />
+          <Skills />
+        </div>
+        <div className="footer">
+          <Info />
+          <AboutMeNext />
+        </div>
+        {/* <DrawingLines /> */}
+        {/* <Imoge />
       <IntroText />*/}
+      </div>
     </div>
   );
 };

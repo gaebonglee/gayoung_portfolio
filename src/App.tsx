@@ -7,7 +7,7 @@ import StarBackground from "./components/StarBackground";
 // import Intro from "./pages/Intro";
 // import AboutMe from "./pages/AboutMe";
 // import Projects from "./pages/Projects";
-// import IntroPage from "./pages/IntroPage";
+import IntroPage from "./pages/IntroPage";
 
 const App: React.FC = () => {
   return (
@@ -19,8 +19,8 @@ const App: React.FC = () => {
         <AboutMe />
         <Projects />
       </div> */}
-      {/* <IntroPage /> */}
-      <Me />
+      <IntroPage />
+      {/* <Me /> */}
     </div>
   );
 };
