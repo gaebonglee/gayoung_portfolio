@@ -1,26 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
+import { useInView } from "react-intersection-observer";
+import Intro from "./components/intro/Intro";
 import Me from "./pages/Me";
 import StarBackground from "./components/StarBackground";
 
-// import Background from "./components/Background";
-// import Intro from "./pages/Intro";
-// import AboutMe from "./pages/AboutMe";
-// import Projects from "./pages/Projects";
-import IntroPage from "./pages/IntroPage";
-
 const App: React.FC = () => {
   return (
-    <div className="Portfolio_container">
-      <StarBackground />
-      {/* <Background />
-      <div className="PortfolioContent_container">
+    <div className="AppContainer">
+      <div className="Portfolio_container">
+        <StarBackground />
         <Intro />
-        <AboutMe />
-        <Projects />
-      </div> */}
-      <IntroPage />
-      <Me />
+        <Me />
+      </div>
     </div>
   );
 };
