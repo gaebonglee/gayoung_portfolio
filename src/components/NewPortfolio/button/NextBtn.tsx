@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../style/desktop/button/NextBtn.scss";
+import "../../../style/NewPortfolio/button/NextBtn.scss";
 
 const AboutMeNext: React.FC = () => {
   const [text, setText] = useState<string>("NEXT PAGE");

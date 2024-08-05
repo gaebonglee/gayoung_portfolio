@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../style/desktop/me/Info.scss";
+import "../../../style/NewPortfolio/me/Info.scss";
 
 const Info: React.FC = () => {
   const [content, setContent] = useState("");

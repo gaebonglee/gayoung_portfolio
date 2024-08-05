@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/desktop/button/IntroNext.scss";
+import "../../../style/NewPortfolio/button/IntroNext.scss";
 
 const IntroNext: React.FC = () => {
   return (
