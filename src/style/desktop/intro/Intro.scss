@@ -20,24 +20,23 @@
 
 @keyframes introAnimation {
   0% {
-    transform: scale(0); 
-    opacity: 0; 
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    transform: scale(1); 
-    opacity: 1; 
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 .lineStyle {
-  background-color: $backgroundBlack;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   padding: 2rem 10rem;
-  border: 3px solid white;
+  border: 3px solid $backgroundBlack;
   border-radius: 10px;
 }
 .textWrap {
@@ -49,7 +48,7 @@
 
   h1 {
     font-family: "BladeLogicDemoRegular", sans-serif;
-    color: white;
+    color: #202020;
     margin: 0;
     padding: 1rem;
     font-size: 5rem;

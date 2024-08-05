@@ -11,7 +11,7 @@ const Intro: React.FC = () => {
             <h1>Welcome To</h1>
             <h1>My Portfolio</h1>
           </div>
-          <NextBtn />
+          {/* <NextBtn /> */}
         </div>
     </section>
   );
