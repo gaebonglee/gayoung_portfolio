@@ -1,3 +1,5 @@
+@import "../../common.scss";
+
 @font-face {
   font-family: "BladeLogicDemoRegular";
   src: url("../../../../assets/BladeLogicDemoRegular-ALnVD.otf")
@@ -16,6 +18,7 @@
 .skills_wrap {
   display: grid;
   border: 2px solid white;
+  background-color: $backgroundBlack;
   border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;

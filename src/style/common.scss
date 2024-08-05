@@ -5,6 +5,7 @@ $secondary-color: #ff7e38;
 $tertiary-color: white;
 
 //----------------새로운 전역변수 color-----------\\
+$backgroundBlack: rgba(0, 0, 0, 0.4);
 $neonblue1: #4949e9;
 $neonblue2: #abc3ff;
 $neongreen: #dcf343;
@@ -13,7 +14,7 @@ $neonpurple: #ca7ffe;
 /* 인터넷 창모드 디자인 */
 .BrowserWindow {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

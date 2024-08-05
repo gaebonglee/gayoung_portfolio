@@ -1,6 +1,6 @@
 import React from "react";
 import DrawingLines from "../components/me/DrawingLines";
-import AboutMeNext from "../components/button/AboutMeNext";
+import AboutMeNext from "../components/button/NextBtn";
 import Skills from "../components/me/Skills";
 import "../style/desktop/me/Me.scss";
 import IntroText from "../components/me/IntroText";

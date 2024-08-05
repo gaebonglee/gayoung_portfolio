@@ -1,3 +1,5 @@
+@import "../../common.scss";
+
 .infoSection {
   position: relative;
   width: 32rem;
@@ -8,6 +10,7 @@
     position: relative;
   }
   .infoText_wrap {
+    background-color: $backgroundBlack;
     display: flex;
     flex-direction: column;
     gap: 10px;

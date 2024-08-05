@@ -1,13 +1,18 @@
 import React from "react";
 import "../../style/desktop/intro/Intro.scss";
-import IntroText from "./IntroText";
-import IntroNext from "../button/IntroNext";
+import NextBtn from "../button/NextBtn";
 
 const Intro: React.FC = () => {
   return (
     <section className="IntroSection">
-      <IntroText />
-      {/* <IntroNext /> */}
+      <div className="lineStyle">
+          <div className="textWrap">
+            <h1>Hello!</h1>
+            <h1>Welcome To</h1>
+            <h1>My Portfolio</h1>
+          </div>
+          <NextBtn />
+        </div>
     </section>
   );
 };

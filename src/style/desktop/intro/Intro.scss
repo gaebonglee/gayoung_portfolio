@@ -1,12 +1,84 @@
 @import "../../common.scss";
 
+@font-face {
+  font-family: "BladeLogicDemoRegular";
+  src: url("../../../../assets/BladeLogicDemoRegular-ALnVD.otf")
+    format("opentype");
+  font-weight: normal;
+}
+
 .IntroSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
+  animation: introAnimation 1s ease-in-out forwards;
 }
 
+@keyframes introAnimation {
+  0% {
+    transform: scale(0); 
+    opacity: 0; 
+  }
+  100% {
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+.lineStyle {
+  background-color: $backgroundBlack;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 10rem;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+  h1 {
+    font-family: "BladeLogicDemoRegular", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 5rem;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &.scrolled {
+    h1 {
+      &:before,
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:before {
+        clip-path: polygon(0 0, 100% 0, 50% 50%);
+        color: white; // 위쪽 부분
+      }
+      &:after {
+        clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+        color: white; // 아래쪽 부분
+      }
+    }
+  }
+}

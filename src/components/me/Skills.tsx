@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/desktop/me/Skills.scss";
+import "../../style/desktop/me/Github.scss";
 
 const Skills: React.FC = () => {
   const skills = [

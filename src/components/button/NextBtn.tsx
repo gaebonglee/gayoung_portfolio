@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../style/desktop/button/AboutMeNext.scss";
+import "../../style/desktop/button/NextBtn.scss";
 
 const AboutMeNext: React.FC = () => {
   const [text, setText] = useState<string>("NEXT PAGE");
@@ -29,7 +29,7 @@ const AboutMeNext: React.FC = () => {
         clearInterval(interval);
         setText(originalText);
         setHovered(false);
-      }, 1500);
+      }, 1000);
     }
   };
 
