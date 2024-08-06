@@ -1,25 +1,29 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
-import "../../style/NewPortfolio/intro/IntroPage.scss"
-import Menubar from "../../components/NewPortfolio/menubar/Menubar";
+import "../../style/NewPortfolio/intro/IntroPage.scss";
 
 const IntroPage: React.FC = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
   return (
     <div className="IntroPage">
-      <section className={`IntroSection ${inView ? "in-view" : ""}`} ref={ref}>
-        <div className="lineStyle">
-          <div className="textWrap">
-            <h1>Hello!</h1>
-            <h1>Welcome To</h1>
-            <h1>My Portfolio</h1>
+      <section className="IntroSection">
+        <div className="textWrap">
+          <div className="subTitle">
+            <a>Lee Ga Young</a>
           </div>
+          <h1 className="h1_top">
+            <span className="char p">P</span>
+            <span className="char o">o</span>
+            <span className="char r">r</span>
+            <span className="char t">t</span>
+          </h1>
+          <h1 className="h1_bottom">
+            <span className="char f">f</span>
+            <span className="char o2">o</span>
+            <span className="char l">l</span>
+            <span className="char i">i</span>
+            <span className="char o3">o</span>
+          </h1>
         </div>
       </section>
-      {/* <Menubar /> */}
     </div>
   );
 };

@@ -6,9 +6,9 @@ import StarBackground from "../components/NewPortfolio/StarBackground";
 const ScrollTriggerPage1: React.FC = () => {
   return (
     <div className="ScrollTriggerPage1">
-      <StarBackground />
+      {/* <StarBackground /> */}
       <IntroPage />
-      <Me />
+      {/* <Me /> */}
     </div>
   );
 };
