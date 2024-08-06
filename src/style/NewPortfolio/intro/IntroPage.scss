@@ -1,23 +1,27 @@
 @import "../../common.scss";
 
 .IntroSection {
-  height: 300vh;
+  position: relative;
+  height: 100vh;
 }
+
 .introContainer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 
   .textWrap {
     position: relative;
     width: 45rem;
+
     .subTitle {
       position: absolute;
       right: 5rem;
       top: 10rem;
+
       a {
         color: white;
         font-size: 1rem;
@@ -25,8 +29,10 @@
         border-radius: 2rem;
         background-color: $neonblue1;
         padding: 1rem 2rem;
+        transition: transform 1s ease, opacity 1s ease;
       }
     }
+
     .h1_top,
     .h1_bottom {
       margin: 0;
@@ -35,41 +41,52 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .h1_top {
       justify-content: left;
     }
+
     .h1_bottom {
       justify-content: right;
     }
-    .char1 {
+
+    .char {
       display: inline-block;
-      transition: transform 0.3s ease;
+      transition: transform 1s ease, opacity 1s ease;
     }
 
     .p {
       transform: rotate(-15deg) translateX(5px);
     }
+
     .o {
       transform: rotate(10deg) translateY(10px);
     }
+
     .r {
       transform: rotate(-10deg) translateX(0px);
     }
+
     .t {
       transform: rotate(-10deg) translateY(20px);
     }
+
     .f {
       transform: rotate(-5deg) translateX(-5px);
     }
+
     .o2 {
       transform: rotate(15deg) translateY(-10px);
     }
+
     .l {
       transform: rotate(-10deg) translateX(-5px);
     }
+
     .i {
       transform: rotate(10deg) translateY(30px);
     }
+
     .o3 {
       transform: rotate(-10deg) translateX(-5px);
     }

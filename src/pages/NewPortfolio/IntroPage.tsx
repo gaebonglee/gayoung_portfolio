@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/NewPortfolio/intro/IntroPage.scss";
+import IntroNext from "../../components/NewPortfolio/button/IntroNext";
 
 const IntroPage: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const IntroPage: React.FC = () => {
             <span className="char o3">o</span>
           </h1>
         </div>
+        <IntroNext />
       </div>
     </section>
   );

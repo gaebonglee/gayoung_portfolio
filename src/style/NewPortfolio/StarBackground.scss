@@ -1,3 +1,5 @@
+@import "../common.scss";
+
 @function multiple-box-shadow($n) {
   $value: "#{random(2000)}px #{random(2000)}px #FFF";
   @for $i from 2 through $n {
@@ -10,6 +12,11 @@ $shadows-small: multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 $shadows-extra: multiple-box-shadow(50);
+
+.backgroundSection {
+  color: $spaceBackground;
+  height: 100vh;
+}
 
 #stars,
 #stars:after {
