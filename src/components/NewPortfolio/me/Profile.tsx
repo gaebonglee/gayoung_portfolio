@@ -20,7 +20,7 @@ const Profile: React.FC<{ resetAnimation: boolean }> = ({ resetAnimation }) => {
 
   return (
     <section className="profileSection">
-      <div className="profileWrap">
+      <div className="profileContainer">
         <div className="profileText_wrap">
           <h3>안녕하세요! 주니어 프론트엔드 개발자 이가영입니다.</h3>
           <p>

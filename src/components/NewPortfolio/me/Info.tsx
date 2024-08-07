@@ -13,7 +13,7 @@ const Info: React.FC<{ resetAnimation: boolean }> = ({ resetAnimation }) => {
         htmlEl.classList.remove("animate");
         setTimeout(() => {
           htmlEl.classList.add("animate");
-        }, 10); // 짧은 지연시간 후에 클래스 추가
+        }, 10);
       });
     }
   }, [resetAnimation]);
