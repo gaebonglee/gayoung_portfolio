@@ -7,7 +7,8 @@ const ScrollTriggerPage1: React.FC = () => {
   return (
     <div className="ScrollTriggerPage1">
       {/* <IntroPage /> */}
-      <MainLayout />
+      {/* <MainLayout /> */}
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+@import "../../common.scss";
 .MainLayout_section {
   width: 100vw;
   height: 100vh;
@@ -14,7 +15,7 @@
       top: 0;
       bottom: 0;
       width: 2px;
-      background-color: red;
+      background-color: $neonblue1;
       animation: drawVerticalLine 3s forwards;
       transform-origin: top;
 
@@ -32,7 +33,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background-color: blue;
+      background-color: $neonblue1;
 
       &.top {
         top: 33.3%;
