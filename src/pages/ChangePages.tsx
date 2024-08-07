@@ -11,7 +11,7 @@ const ChangePages: React.FC = () => {
     setShowMainLayout(true);
     setTimeout(() => {
       setSlideIn(true);
-    }, 10);
+    }, 1);
   };
 
   return (

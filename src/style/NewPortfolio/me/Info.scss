@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
 
   .infoContainer {
     display: flex;
@@ -24,9 +23,11 @@
       animation-delay: var(--animation-delay);
     }
     h3 {
+      color: $neongreen;
       font-size: 1.5rem;
     }
     p {
+      color: white;
       font-size: 1rem;
     }
   }

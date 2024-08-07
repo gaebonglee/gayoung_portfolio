@@ -2,6 +2,7 @@ import React from "react";
 import Profile from "./Profile";
 import Skills from "./Skills";
 import Info from "./Info";
+import "../../../style/NewPortfolio/me/Content.scss";
 
 interface ContentsProps {
   type: "profile" | "skills" | "info";
@@ -23,7 +24,7 @@ const Contents: React.FC<ContentsProps> = ({ type, resetAnimation }) => {
     default:
       contentText = null;
   }
-  return <div className={`icon ${type}_wrap`}>{contentText}</div>;
+  return <div className={`Content ${type}_wrap`}>{contentText}</div>;
 };
 
 export default Contents;

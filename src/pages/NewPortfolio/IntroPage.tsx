@@ -14,7 +14,7 @@ const IntroPage: React.FC<IntroPageProps> = ({ onNextClick }) => {
     setAnimate(true);
     setTimeout(() => {
       onNextClick();
-    }, 1000); // 애니메이션 시간이 1초이므로 1초 후에 onNextClick 호출
+    }, 1000); 
   };
 
   return (

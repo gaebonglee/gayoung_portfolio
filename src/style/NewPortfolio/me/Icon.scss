@@ -1,3 +1,5 @@
+@import "../../common.scss";
+
 .icon {
   // 공통 스타일
   width: 100%;
@@ -5,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
   .title {
@@ -13,13 +14,27 @@
     font-weight: 600;
   }
 
-    &.profile_wrap {
-      // profile 아이콘에 대한 스타일
-
-      color: #000080;
-
-      &:hover {
-        background-color: #e0e7ff;
-      }
+  &.profile_wrap {
+    color: $neonblue1;
+    transition: 0.2s ease;
+    &:hover {
+      color: $neongreen;
     }
+  }
+
+  &.skills_wrap {
+    color: $neonblue1;
+    transition: 0.2s ease;
+    &:hover {
+      color: $neongreen;
+    }
+  }
+
+  &.info_wrap {
+    color: $neonblue1;
+    transition: 0.2s ease;
+    &:hover {
+      color: $neongreen;
+    }
+  }
 }
