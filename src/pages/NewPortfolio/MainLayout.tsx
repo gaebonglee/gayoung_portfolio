@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import "../../style/NewPortfolio/me/MainLayout.scss";
 import Icon from "../../components/NewPortfolio/me/Icon";
 import Contents from "../../components/NewPortfolio/me/Contents";
@@ -14,6 +14,7 @@ const MainLayout: React.FC = () => {
   const [selected, setSelected] = useState<
     "profile" | "skills" | "info" | null
   >("profile");
+  const [resetAnimation, setResetAnimation] = useState<boolean>(false);
   const swiperRef = useRef<any>(null);
 
   const handleIconClick = (type: "profile" | "skills" | "info") => {
@@ -21,8 +22,15 @@ const MainLayout: React.FC = () => {
     if (swiperRef.current) {
       const slideIndex = type === "profile" ? 0 : type === "skills" ? 1 : 2;
       swiperRef.current.swiper.slideTo(slideIndex);
+      setResetAnimation(true);
+      setTimeout(() => setResetAnimation(false), 0);
     }
   };
+
+  const handleSlideChange = useCallback(() => {
+    setResetAnimation(true);
+    setTimeout(() => setResetAnimation(false), 0);
+  }, []);
 
   return (
     <section className="MainLayout_section">
@@ -68,15 +76,16 @@ const MainLayout: React.FC = () => {
             pagination={false}
             modules={[EffectCube, Pagination]}
             className="contentStyle"
+            onSlideChange={handleSlideChange}
           >
-            <SwiperSlide>
-              <Contents type="profile" />
+            <SwiperSlide key={resetAnimation ? "profile-reset" : "profile"}>
+              <Contents type="profile" resetAnimation={resetAnimation} />
             </SwiperSlide>
-            <SwiperSlide>
-              <Contents type="skills" />
+            <SwiperSlide key={resetAnimation ? "skills-reset" : "skills"}>
+              <Contents type="skills" resetAnimation={resetAnimation} />
             </SwiperSlide>
-            <SwiperSlide>
-              <Contents type="info" />
+            <SwiperSlide key={resetAnimation ? "info-reset" : "info"}>
+              <Contents type="info" resetAnimation={resetAnimation} />
             </SwiperSlide>
           </Swiper>
         </div>

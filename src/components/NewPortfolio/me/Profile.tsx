@@ -1,20 +1,27 @@
 import React, { useEffect } from "react";
 import "../../../style/NewPortfolio/me/Profile.scss";
 
-const Profile: React.FC = () => {
+const Profile: React.FC<{ resetAnimation: boolean }> = ({ resetAnimation }) => {
   useEffect(() => {
-    const elements = document.querySelectorAll(".textWrap p, .textWrap h3");
-    elements.forEach((el, index) => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.style.setProperty("--animation-delay", `${index * 0.1}s`);
-      htmlEl.classList.add("animate");
-    });
-  }, []);
+    if (resetAnimation) {
+      const elements = document.querySelectorAll(
+        ".profileText_wrap p, .profileText_wrap h3"
+      );
+      elements.forEach((el, index) => {
+        const htmlEl = el as HTMLElement;
+        htmlEl.style.setProperty("--animation-delay", `${index * 0.1}s`);
+        htmlEl.classList.remove("animate");
+        setTimeout(() => {
+          htmlEl.classList.add("animate");
+        }, 10);
+      });
+    }
+  }, [resetAnimation]);
 
   return (
     <section className="profileSection">
       <div className="profileWrap">
-        <div className="textWrap">
+        <div className="profileText_wrap">
           <h3>안녕하세요! 주니어 프론트엔드 개발자 이가영입니다.</h3>
           <p>
             저는 입체조형학과에서 창의적이고 세심한 디자인 감각을 키웠습니다.

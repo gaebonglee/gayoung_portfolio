@@ -5,19 +5,20 @@ import Info from "./Info";
 
 interface ContentsProps {
   type: "profile" | "skills" | "info";
+  resetAnimation: boolean;
 }
 
-const Contents: React.FC<ContentsProps> = ({ type }) => {
+const Contents: React.FC<ContentsProps> = ({ type, resetAnimation }) => {
   let contentText;
   switch (type) {
     case "profile":
-      contentText = <Profile />;
+      contentText = <Profile resetAnimation={resetAnimation} />;
       break;
     case "skills":
-      contentText = <Skills/>;
+      contentText = <Skills resetAnimation={resetAnimation} />;
       break;
     case "info":
-      contentText = <Info/>
+      contentText = <Info resetAnimation={resetAnimation} />;
       break;
     default:
       contentText = null;

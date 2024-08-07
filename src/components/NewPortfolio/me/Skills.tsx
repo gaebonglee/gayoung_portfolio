@@ -2,7 +2,7 @@ import React from "react";
 import "../../../style/NewPortfolio/me/Skills.scss";
 import "../../../style/NewPortfolio/me/Github.scss";
 
-const Skills: React.FC = () => {
+const Skills: React.FC<{ resetAnimation: boolean }> = ({ resetAnimation }) => {
   const skills = [
     {
       name: "HTML5",
