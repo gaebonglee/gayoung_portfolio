@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: black;
 }
 
 .profileContainer {
@@ -16,7 +16,7 @@
   padding: 3rem;
 }
 .profileText_wrap {
-  color: black;
+  color: white;
   p,
   h3 {
     opacity: 0;

@@ -1,17 +1,23 @@
 @import "../../common.scss";
 
-.githubSection {
+.githubWrap {
   .line {
-    border: 2px solid white;
+    border: 2px solid $black;
+    border-radius: 2rem;
     padding: 1rem 2rem;
     a {
       font-size: 1.5rem;
       text-decoration: none;
-      color: white;
+      color: $black;
+      font-weight: 600;
     }
-  }
-  &:hover {
-    background-color: $backgroundBlack;
-    border-radius: 10px;
+    &:hover {
+      background-color: black;
+
+      border-radius: 2rem;
+      a {
+        color: white;
+      }
+    }
   }
 }

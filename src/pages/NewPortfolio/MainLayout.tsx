@@ -2,17 +2,23 @@ import React, { useRef, useState, useCallback } from "react";
 import "../../style/NewPortfolio/me/MainLayout.scss";
 import Icon from "../../components/NewPortfolio/me/Icon";
 import Contents from "../../components/NewPortfolio/me/Contents";
+import LayoutNext from "../../components/NewPortfolio/button/LayoutNext";
+import Github from "../../components/NewPortfolio/me/Github";
+
+//swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
 
+
 interface MainLayoutProps {
   show: boolean;
+  onNextClick: () => void;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ show }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
   const [selected, setSelected] = useState<
     "profile" | "skills" | "info" | null
   >("profile");
@@ -33,6 +39,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show }) => {
     setResetAnimation(true);
     setTimeout(() => setResetAnimation(false), 0);
   }, []);
+
+  const LayoutNextClick = () => {
+    onNextClick();
+  };
 
   return (
     <section className={`MainLayout_section ${show ? "slide-in" : ""}`}>
@@ -90,6 +100,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show }) => {
               <Contents type="info" resetAnimation={resetAnimation} />
             </SwiperSlide>
           </Swiper>
+        </div>
+        <div className="ButtonWrap">
+          <div className="GitHubBtn">
+            <Github />
+          </div>
+          <div className="NextBtn">
+            <LayoutNext onClick={LayoutNextClick} />
+          </div>
         </div>
       </div>
     </section>

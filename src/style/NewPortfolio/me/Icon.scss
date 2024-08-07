@@ -15,26 +15,26 @@
   }
 
   &.profile_wrap {
-    color: $neonblue1;
+    color: $neonblue2;
     transition: 0.2s ease;
     &:hover {
-      color: $neongreen;
+      color: $neonblue1;
     }
   }
 
   &.skills_wrap {
-    color: $neonblue1;
+    color: $neonblue2;
     transition: 0.2s ease;
     &:hover {
-      color: $neongreen;
+      color: $neonblue1;
     }
   }
 
   &.info_wrap {
-    color: $neonblue1;
+    color: $neonblue2;
     transition: 0.2s ease;
     &:hover {
-      color: $neongreen;
+      color: $neonblue1;
     }
   }
 }

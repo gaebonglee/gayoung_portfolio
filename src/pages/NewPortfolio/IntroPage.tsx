@@ -10,7 +10,7 @@ interface IntroPageProps {
 const IntroPage: React.FC<IntroPageProps> = ({ onNextClick }) => {
   const [animate, setAnimate] = useState(false);
 
-  const handleNextClick = () => {
+  const IntroNextClick = () => {
     setAnimate(true);
     setTimeout(() => {
       onNextClick();
@@ -38,7 +38,7 @@ const IntroPage: React.FC<IntroPageProps> = ({ onNextClick }) => {
             <span className="char o3">o</span>
           </h1>
         </div>
-        <IntroNext onClick={handleNextClick} />
+        <IntroNext onClick={IntroNextClick} />
       </div>
     </section>
   );

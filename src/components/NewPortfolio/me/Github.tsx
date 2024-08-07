@@ -1,8 +1,9 @@
 import React from "react";
+import "../../../style/NewPortfolio/me/Github.scss"
 
 const Github: React.FC = () => {
   return (
-    <section className="githubSection">
+    <section className="githubWrap">
       <div className="line">
         <a
           href="https://github.com/gaebonglee"

@@ -7,7 +7,7 @@ interface IntroNextProps {
 
 const IntroNext: React.FC<IntroNextProps> = ({ onClick }) => {
   return (
-    <button className="nextButton" onClick={onClick}>
+    <button className="IntroNext" onClick={onClick}>
       Next Page
     </button>
   );

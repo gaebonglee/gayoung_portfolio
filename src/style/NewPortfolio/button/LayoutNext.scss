@@ -1,10 +1,10 @@
 @import "../../common.scss";
 
-.IntroNext {
+.LayoutNext {
   cursor: pointer;
   align-self: center;
-  background-color: black;
-  color: white;
+  background-color: $neongreen;
+  color: $neonblue1;
   border: none;
   font-size: 1.3rem;
   font-weight: 600;
@@ -13,7 +13,7 @@
   margin-top: 2rem;
 
   &:hover {
-    color: $neonblue1;
-    background-color: $neongreen;
+    color: white;
+    background-color: black;
   }
 }
