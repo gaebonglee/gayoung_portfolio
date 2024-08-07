@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../style/NewPortfolio/intro/IntroPage.scss";
 import IntroNext from "../../components/NewPortfolio/button/IntroNext";
+import "animate.css";
 
-const IntroPage: React.FC = () => {
+interface IntroPageProps {
+  onNextClick: () => void;
+}
+
+const IntroPage: React.FC<IntroPageProps> = ({ onNextClick }) => {
+  const [animate, setAnimate] = useState(false);
+
+  const handleNextClick = () => {
+    setAnimate(true);
+    setTimeout(() => {
+      onNextClick();
+    }, 1000); // 애니메이션 시간이 1초이므로 1초 후에 onNextClick 호출
+  };
+
   return (
-    <section className="IntroSection">
+    <section className={`IntroSection ${animate ? "slide-out" : ""}`}>
       <div className="introContainer">
         <div className="textWrap">
           <div className="subTitle">
@@ -24,7 +38,7 @@ const IntroPage: React.FC = () => {
             <span className="char o3">o</span>
           </h1>
         </div>
-        <IntroNext />
+        <IntroNext onClick={handleNextClick} />
       </div>
     </section>
   );

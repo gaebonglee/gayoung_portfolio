@@ -1,11 +1,15 @@
 import React from "react";
 import "../../../style/NewPortfolio/button/IntroNext.scss";
 
-const IntroNext: React.FC = () => {
+interface IntroNextProps {
+  onClick: () => void;
+}
+
+const IntroNext: React.FC<IntroNextProps> = ({ onClick }) => {
   return (
-    <div>
-      <button className="nextButton">Next Page</button>
-    </div>
+    <button className="nextButton" onClick={onClick}>
+      Next Page
+    </button>
   );
 };
 

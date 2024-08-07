@@ -2,15 +2,17 @@ import React, { useRef, useState, useCallback } from "react";
 import "../../style/NewPortfolio/me/MainLayout.scss";
 import Icon from "../../components/NewPortfolio/me/Icon";
 import Contents from "../../components/NewPortfolio/me/Contents";
-
-//Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
 
-const MainLayout: React.FC = () => {
+interface MainLayoutProps {
+  show: boolean;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ show }) => {
   const [selected, setSelected] = useState<
     "profile" | "skills" | "info" | null
   >("profile");
@@ -33,7 +35,7 @@ const MainLayout: React.FC = () => {
   }, []);
 
   return (
-    <section className="MainLayout_section">
+    <section className={`MainLayout_section ${show ? "slide-in" : ""}`}>
       <div className="layoutLine_container">
         <div className="vertical-line left"></div>
         <div className="vertical-line right"></div>
