@@ -7,23 +7,17 @@
   font-weight: normal;
 }
 
-.skills_container {
-  margin: 1rem;
+.skills_section {
+  width: 100%;
+  height: 100%;
+  background-color: black;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.skills_wrap {
+.skills {
   display: grid;
-  border: 2px solid white;
-  background-color: $backgroundBlack;
-  border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  width: 100%;
-  padding: 1rem;
 }
 
 .textContent {

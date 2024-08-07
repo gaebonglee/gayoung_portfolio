@@ -47,9 +47,9 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section className="skills_container">
+    <section className="skills_section">
       <div className="textContent">
-        <section className="githubSection">
+        {/* <section className="githubSection">
           <div className="line">
             <a
               href="https://github.com/gaebonglee"
@@ -59,10 +59,10 @@ const Skills: React.FC = () => {
               GITHUB
             </a>
           </div>
-        </section>
+        </section> */}
         <a className="skillTitle">SKILLS</a>
       </div>
-      <div className="skills_wrap">
+      <div className="skills">
         {skills.map((skill, index) => (
           <div className="skill_icon" key={index}>
             <img src={skill.image} alt={skill.name} />

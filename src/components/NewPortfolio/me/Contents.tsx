@@ -1,4 +1,7 @@
 import React from "react";
+import Profile from "./Profile";
+import Skills from "./Skills";
+import Info from "./Info";
 
 interface ContentsProps {
   type: "profile" | "skills" | "info";
@@ -8,13 +11,13 @@ const Contents: React.FC<ContentsProps> = ({ type }) => {
   let contentText;
   switch (type) {
     case "profile":
-      contentText = <p>PROFILE text!</p>;
+      contentText = <Profile />;
       break;
     case "skills":
-      contentText = <p>SKILLS text!</p>;
+      contentText = <Skills/>;
       break;
     case "info":
-      contentText = <p>INFORMATION text!</p>;
+      contentText = <Info/>
       break;
     default:
       contentText = null;
@@ -23,4 +26,3 @@ const Contents: React.FC<ContentsProps> = ({ type }) => {
 };
 
 export default Contents;
-

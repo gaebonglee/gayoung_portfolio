@@ -1,20 +1,21 @@
 import React from "react";
+import "../../../style/NewPortfolio/me/Icon.scss";
 
 interface IconProps {
-  type: 'profile' | 'skills' | 'info';
+  type: "profile" | "skills" | "info";
 }
 
 const Icon: React.FC<IconProps> = ({ type }) => {
   let content;
   switch (type) {
-    case 'profile':
-      content = <p>PROFILE</p>;
+    case "profile":
+      content = <p className="title">PROFILE</p>;
       break;
-    case 'skills':
-      content = <p>SKILLS</p>;
+    case "skills":
+      content = <p className="title">SKILLS</p>;
       break;
-    case 'info':
-      content = <p>INFORMATION</p>;
+    case "info":
+      content = <p className="title">INFORMATION</p>;
       break;
     default:
       content = null;
