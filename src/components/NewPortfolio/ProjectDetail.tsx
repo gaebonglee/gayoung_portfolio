@@ -11,9 +11,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
   return (
     <div className="project-detail">
       <button onClick={onClose}>Close</button>
-      <div className="project-image">
-        <img src={project.image} alt={project.title} />
-      </div>
       <div className="card-content">
         <h3>{project.title}</h3>
         <div className="explanation_inner description">
