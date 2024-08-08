@@ -1,6 +1,6 @@
-// ProjectDetail.tsx
 import React from "react";
 import { projects, ProjectType } from "../../data/projects";
+import "../../style/NewPortfolio/ProjectDetail.scss";
 
 interface ProjectDetailProps {
   project: ProjectType;
@@ -9,22 +9,23 @@ interface ProjectDetailProps {
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
   return (
-    <div className="project-detail">
+    <div className="project_detail">
       <button onClick={onClose}>Close</button>
-      <div className="card-content">
-        <h3>{project.title}</h3>
-        <div className="explanation_inner description">
-          {project.description}
+      <div className="cardContent">
+        <div className="titleWrap"></div>
+        <a>{project.title}</a>
+        <div className="card_inner description">
+          <p>{project.description}</p>
         </div>
-        <div className="explanation_inner period">
+        <div className="card_inner period">
           <h4># Period : </h4>
           <a>{project.period}</a>
         </div>
-        <div className="explanation_inner tech">
+        <div className="card_inner tech">
           <h4># Tech :</h4>
           <a> {project.tech}</a>
         </div>
-        <div className="explanation_inner mywork">
+        <div className="card_inner myWork">
           <h4> # My Work :</h4>
           <a>{project.mywork}</a>
         </div>
