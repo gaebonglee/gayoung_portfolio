@@ -2,34 +2,45 @@ import React, { useState, useEffect } from "react";
 import IntroPage from "./NewPortfolio/IntroPage";
 import MainLayout from "./NewPortfolio/MainLayout";
 import Projects from "./NewPortfolio/Projects";
-
 import "../style/pages/ChangePages.scss";
 
 const ChangePages: React.FC = () => {
-  const [showMainLayout, setShowMainLayout] = useState(false);
+  const [currentPage, setCurrentPage] = useState<"intro" | "main" | "projects">(
+    "intro"
+  );
   const [slideIn, setSlideIn] = useState(false);
 
-  const IntroNextClick = () => {
-    setShowMainLayout(true);
+  useEffect(() => {
+    if (currentPage !== "intro") {
+      setTimeout(() => {
+        setSlideIn(true);
+      }, 100);
+    }
+  }, [currentPage]);
+
+  const handleIntroNextClick = () => {
+    setSlideIn(false);
     setTimeout(() => {
-      setSlideIn(true);
-    }, 1);
+      setCurrentPage("main");
+    }, 100);
   };
 
-  const LayoutNextClick = () => {
-    setShowMainLayout(true);
+  const handleMainNextClick = () => {
+    setSlideIn(false);
     setTimeout(() => {
-      setSlideIn(true);
-    }, 1);
+      setCurrentPage("projects");
+    }, 100);
   };
 
   return (
     <div className="PagesWrap">
-      {!showMainLayout && <IntroPage onNextClick={IntroNextClick} />}
-      {showMainLayout && (
-        <MainLayout show={slideIn} onNextClick={LayoutNextClick} />
+      {currentPage === "intro" && (
+        <IntroPage onNextClick={handleIntroNextClick} />
       )}
-      <Projects />
+      {currentPage === "main" && (
+        <MainLayout show={slideIn} onNextClick={handleMainNextClick} />
+      )}
+      {currentPage === "projects" && <Projects show={slideIn} />}
     </div>
   );
 };

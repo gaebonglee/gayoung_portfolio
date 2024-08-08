@@ -1,0 +1,25 @@
+@import "../common.scss";
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.projectSection {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+
+  &.slide-in {
+    transform: translateY(0);
+    animation: slideInUp 1s forwards;
+  }
+}

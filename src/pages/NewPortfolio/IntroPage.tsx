@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "../../style/NewPortfolio/intro/IntroPage.scss";
+import React, { useState } from "react";
+import "../../style/pages/IntroPage.scss";
 import IntroNext from "../../components/NewPortfolio/button/IntroNext";
 import "animate.css";
 
@@ -14,7 +14,7 @@ const IntroPage: React.FC<IntroPageProps> = ({ onNextClick }) => {
     setAnimate(true);
     setTimeout(() => {
       onNextClick();
-    }, 1000); 
+    }, 100);
   };
 
   return (

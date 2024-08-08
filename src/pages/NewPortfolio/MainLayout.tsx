@@ -1,9 +1,10 @@
 import React, { useRef, useState, useCallback } from "react";
-import "../../style/NewPortfolio/me/MainLayout.scss";
+import "../../style/pages/MainLayout.scss";
 import Icon from "../../components/NewPortfolio/me/Icon";
 import Contents from "../../components/NewPortfolio/me/Contents";
 import LayoutNext from "../../components/NewPortfolio/button/LayoutNext";
 import Github from "../../components/NewPortfolio/me/Github";
+import Projects from "../../pages/NewPortfolio/Projects";
 
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,7 +12,6 @@ import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
-
 
 interface MainLayoutProps {
   show: boolean;
@@ -23,6 +23,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
     "profile" | "skills" | "info" | null
   >("profile");
   const [resetAnimation, setResetAnimation] = useState<boolean>(false);
+  const [showProjects, setShowProjects] = useState<boolean>(false);
   const swiperRef = useRef<any>(null);
 
   const handleIconClick = (type: "profile" | "skills" | "info") => {
@@ -41,7 +42,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
   }, []);
 
   const LayoutNextClick = () => {
-    onNextClick();
+    setShowProjects(true);
+    setTimeout(() => {
+      onNextClick();
+    }, 100); 
   };
 
   return (
@@ -73,6 +77,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
           >
             <Icon type="info" />
           </div>
+          <div className="icon-item" id="item4">
+            <Github />
+          </div>
         </div>
         <div className="content-display">
           <Swiper
@@ -82,8 +89,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
             cubeEffect={{
               shadow: false,
               slideShadows: false,
-              shadowOffset: 20,
-              shadowScale: 0.94,
             }}
             pagination={false}
             modules={[EffectCube, Pagination]}
@@ -102,14 +107,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
           </Swiper>
         </div>
         <div className="ButtonWrap">
-          <div className="GitHubBtn">
-            <Github />
-          </div>
           <div className="NextBtn">
             <LayoutNext onClick={LayoutNextClick} />
           </div>
         </div>
       </div>
+      {showProjects && <Projects show={showProjects} />}
     </section>
   );
 };
