@@ -1,4 +1,5 @@
 @import "../common.scss";
+@import "~animate.css/animate.css";
 
 @keyframes slideInUp {
   from {
@@ -21,5 +22,26 @@
   &.slide-in {
     transform: translateY(0);
     animation: slideInUp 1s forwards;
+  }
+
+  .ProjectTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .animate__fadeInUpBig {
+    opacity: 0;
+  }
+
+  .animate-delay-1s {
+    animation-delay: 1s;
   }
 }
