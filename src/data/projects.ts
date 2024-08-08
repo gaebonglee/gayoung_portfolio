@@ -1,3 +1,14 @@
+export interface ProjectType {
+  title: string;
+  description: string;
+  period: string;
+  tech: string;
+  mywork: string;
+  image: string;
+  projectLink: string;
+  githubLink: string;
+}
+
 export const projects = [
   {
     title: "Trainer Matching Project",

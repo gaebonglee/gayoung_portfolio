@@ -1,12 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../style/NewPortfolio/Project.scss";
-import { projects } from "../../data/projects";
+import { projects, ProjectType } from "../../data/projects";
+import ProjectDetail from "./ProjectDetail";
 
 const Project: React.FC = () => {
   const sliderRef = useRef<Slider | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null
+  );
 
   useEffect(() => {
     const handleScroll = (event: WheelEvent) => {
@@ -33,46 +37,21 @@ const Project: React.FC = () => {
 
   return (
     <div className="gallery">
+      {selectedProject && (
+        <ProjectDetail
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
       <Slider ref={sliderRef} {...settings}>
         {projects.map((project, index) => (
-          <div key={index} className="card">
+          <div
+            key={index}
+            className="card"
+            onClick={() => setSelectedProject(project)}
+          >
             <div className="imgFile">
               <img src={project.image} alt={project.title} />
-            </div>
-
-            <div className="card-content">
-              <h3>{project.title}</h3>
-              <div className="explanation_inner description">
-                {project.description}
-              </div>
-              <div className="explanation_inner period">
-                <h4># Period : </h4>
-                <a>{project.period}</a>
-              </div>
-              <div className="explanation_inner tech">
-                <h4># Tech :</h4>
-                <a> {project.tech}</a>
-              </div>
-              <div className="explanation_inner mywork">
-                <h4> # My Work :</h4>
-                <a>{project.mywork}</a>
-              </div>
-              <div className="linkWrap">
-                <a
-                  href={project.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Source
-                </a>
-              </div>
             </div>
           </div>
         ))}
