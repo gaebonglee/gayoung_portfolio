@@ -11,6 +11,7 @@
       font-size: 1.5rem;
     }
   }
+
   .description {
     font-size: 1rem;
     line-height: 1.4;
@@ -31,12 +32,31 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
     a {
       padding: 1rem;
       font-size: 1.2rem;
       border: 2px solid red;
       border-radius: 1.5rem;
       color: red;
+    }
+  }
+
+  .myWork_wrap {
+    display: flex;
+    gap: 1rem;
+
+    .myWork {
+      padding: 1rem;
+      border-radius: 1.5rem;
+
+      &.true {
+        border: 1px solid red;
+      }
+
+      &.false {
+        border: 1px solid blue;
+      }
     }
   }
 }

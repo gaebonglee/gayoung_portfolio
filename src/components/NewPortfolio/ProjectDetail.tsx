@@ -13,14 +13,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
       <button onClick={onClose}>Close</button>
       <div className="cardContent">
         <div className="myWork_wrap">
-          <div className="myWork">
-            <a>{project.design}Design</a>
+          <div className={`myWork ${project.design ? "true" : "false"}`}>
+            <a>Design</a>
           </div>
-          <div className="myWork">
-            <a>{project.frontEnd}Front-end</a>
+          <div className={`myWork ${project.frontEnd ? "true" : "false"}`}>
+            <a>Front-end</a>
           </div>
-          <div className="myWork">
-            <a>{project.backEnd}Back-end</a>
+          <div className={`myWork ${project.backEnd ? "true" : "false"}`}>
+            <a>Back-end</a>
           </div>
         </div>
         <div className="titleWrap">
