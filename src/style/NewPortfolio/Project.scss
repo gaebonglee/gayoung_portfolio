@@ -1,0 +1,20 @@
+@import "../common.scss";
+
+.gallery {
+  display: flex;
+  align-items: center;
+
+}
+.cards {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  li {
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+  }
+}
