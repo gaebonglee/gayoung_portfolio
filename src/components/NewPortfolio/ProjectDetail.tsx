@@ -12,21 +12,23 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
     <div className="project_detail">
       <button onClick={onClose}>Close</button>
       <div className="cardContent">
-        <div className="titleWrap"></div>
-        <a>{project.title}</a>
-        <div className="card_inner description">
+        <div className="titleWrap">
+          <p>{project.title}</p>
+          <a>{project.subTitle}</a>
+        </div>
+        <div className="description">
           <p>{project.description}</p>
         </div>
-        <div className="card_inner period">
-          <h4># Period : </h4>
+        <div className="card_inner">
+          <h4>Period</h4>
           <a>{project.period}</a>
         </div>
-        <div className="card_inner tech">
-          <h4># Tech :</h4>
+        <div className="card_inner">
+          <h4>Tech</h4>
           <a> {project.tech}</a>
         </div>
-        <div className="card_inner myWork">
-          <h4> # My Work :</h4>
+        <div className="card_inner">
+          <h4>My Work</h4>
           <a>{project.mywork}</a>
         </div>
         <div className="linkWrap">

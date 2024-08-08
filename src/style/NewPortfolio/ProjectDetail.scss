@@ -1,29 +1,42 @@
 @import "../common.scss";
 
 .cardContent {
-    .titleWrap{
-        
+  .titleWrap {
+    p {
+      color: black;
+      font-size: 3rem;
+      font-weight: 800;
     }
-  h3 {
-    color: #4c4c6d;
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -3px;
+    a {
+      font-size: 1.5rem;
+    }
   }
+  .description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
   .card_inner {
-    margin-bottom: 12px;
-    h4 {
-      font-size: 1.1rem;
-    }
-    .description {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-    .period,
-    .tech,
-    .mywork {
-      display: flex;
-      flex-direction: column;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .linkWrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    a {
+      padding: 1rem;
+      font-size: 1.2rem;
+      border: 2px solid red;
+      border-radius: 1.5rem;
+      color: red;
     }
   }
 }
