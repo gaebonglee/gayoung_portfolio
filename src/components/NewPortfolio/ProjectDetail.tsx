@@ -12,6 +12,17 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
     <div className="project_detail">
       <button onClick={onClose}>Close</button>
       <div className="cardContent">
+        <div className="myWork_wrap">
+          <div className="myWork">
+            <a>{project.design}Design</a>
+          </div>
+          <div className="myWork">
+            <a>{project.frontEnd}Front-end</a>
+          </div>
+          <div className="myWork">
+            <a>{project.backEnd}Back-end</a>
+          </div>
+        </div>
         <div className="titleWrap">
           <p>{project.title}</p>
           <a>{project.subTitle}</a>
@@ -26,10 +37,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
         <div className="card_inner">
           <h4>Tech</h4>
           <a> {project.tech}</a>
-        </div>
-        <div className="card_inner">
-          <h4>My Work</h4>
-          <a>{project.mywork}</a>
         </div>
         <div className="linkWrap">
           <a
