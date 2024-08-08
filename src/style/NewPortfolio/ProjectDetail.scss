@@ -1,9 +1,23 @@
 @import "../common.scss";
 
+.back {
+  background-color: black;
+}
+.closeBtn {
+  padding: 1rem;
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+  }
+}
 .cardContent {
   .titleWrap {
+    color: white;
     p {
-      color: black;
       font-size: 3rem;
       font-weight: 800;
     }
@@ -12,6 +26,10 @@
     }
   }
 
+  .description,
+  .card_inner {
+    color: white;
+  }
   .description {
     font-size: 1rem;
     line-height: 1.4;
@@ -22,8 +40,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-    border: 1px solid red;
+    padding: 10px 20px;
+    border: 2px solid $neonblue2;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
   }
@@ -35,10 +53,17 @@
 
     a {
       padding: 1rem;
+      font-weight: 700;
       font-size: 1.2rem;
-      border: 2px solid red;
+      border: 2px solid white;
       border-radius: 1.5rem;
-      color: red;
+      color: white;
+      transition: 0.2s;
+      &:hover {
+        border: 2px solid $neongreen;
+        background-color: $neongreen;
+        color: $neonblue1;
+      }
     }
   }
 
@@ -47,15 +72,20 @@
     gap: 1rem;
 
     .myWork {
+      font-weight: 700;
       padding: 1rem;
       border-radius: 1.5rem;
 
       &.true {
-        border: 1px solid red;
+        border: 2px solid $neonblue2;
+        background-color: $neonblue2;
+        color: $neonblue1;
       }
 
       &.false {
-        border: 1px solid blue;
+        border: 2px solid white;
+        background-color: rgba(255, 255, 255, 0.212);
+        color: white;
       }
     }
   }
