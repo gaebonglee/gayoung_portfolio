@@ -37,16 +37,18 @@ const ImageCell: React.FC<ImageCellProps> = ({ project, index }) => {
   };
 
   return (
-    <div
-      className={`grid__cell-img grid__cell-img-${index}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className={`grid__cell ${project.gridPosition}`}>
       <div
-        className={`grid__cell-img-inner grid__cell-img-inner-${index}`}
-        data-item={index}
+        className={`grid__cell-img grid__cell-img-${index}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <img src={project.image} alt={project.title} />
+        <div
+          className={`grid__cell-img-inner grid__cell-img-inner-${index}`}
+          data-item={index}
+        >
+          <img src={project.image} alt={project.title} />
+        </div>
       </div>
     </div>
   );

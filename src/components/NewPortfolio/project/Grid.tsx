@@ -14,8 +14,8 @@ const Grid: React.FC = () => {
   };
 
   return (
-    <div className="gallery">
-      {selectedProject && (
+    <section className="gallery">
+      {/* {selectedProject && (
         <ProjectDetail
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
@@ -30,8 +30,19 @@ const Grid: React.FC = () => {
             onClick={() => handleCardClick(project)}
           />
         ))}
+      </div> */}
+      <div className="grid grid--large">
+        {projects.map((project, index) => (
+          <ImageCell
+            key={index}
+            project={project}
+            index={index}
+            onClick={() => handleCardClick(project)}
+          />
+        ))}
       </div>
-    </div>
+      <div className="content"></div>
+    </section>
   );
 };
 

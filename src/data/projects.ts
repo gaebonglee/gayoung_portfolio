@@ -10,6 +10,7 @@ export interface ProjectType {
   design: boolean;
   frontEnd: boolean;
   backEnd: boolean;
+  gridPosition: string;
 }
 
 export const projects = [
@@ -26,6 +27,7 @@ export const projects = [
     design: true,
     frontEnd: true,
     backEnd: true,
+    gridPosition: "grid__cell-c1-r1",
   },
   {
     title: "LUKS",
@@ -41,6 +43,7 @@ export const projects = [
     design: true,
     frontEnd: true,
     backEnd: true,
+    gridPosition: "grid__cell-c2-r1",
   },
   {
     title: "Portfolio",
@@ -55,6 +58,7 @@ export const projects = [
     design: true,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c4-r1",
   },
   {
     title: "Exchange Currency",
@@ -70,6 +74,7 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c1-r2",
   },
   {
     title: "Header",
@@ -85,6 +90,7 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c3-r2",
   },
   {
     title: "ProductTimer",
@@ -100,6 +106,7 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c2-r3",
   },
   {
     title: "Category",
@@ -115,6 +122,7 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c4-r3",
   },
   {
     title: "To Do List",
@@ -131,5 +139,6 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
+    gridPosition: "grid__cell-c4-r4",
   },
 ];
