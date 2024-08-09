@@ -15,7 +15,6 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: hidden;
   transform: translateY(100%);
   transition: transform 1s ease;
 
@@ -40,4 +39,8 @@
   .animate-delay-1s {
     animation-delay: 1s;
   }
+}
+
+.ProjectContainer {
+  margin: 1rem;
 }

@@ -25,7 +25,8 @@
   .textWrap {
     position: relative;
     width: 45rem;
-    margin: 10rem;
+    overflow: hidden;
+    margin: 2rem;
 
     .subTitle {
       position: absolute;

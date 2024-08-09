@@ -1,6 +1,7 @@
 import React from "react";
 import "../../style/pages/Projects.scss";
 import "animate.css";
+import Project from "../../components/NewPortfolio/Project";
 
 interface ProjectsProps {
   show: boolean;
@@ -18,7 +19,9 @@ const Projects: React.FC<ProjectsProps> = ({ show }) => {
           PROJECTS
         </h1>
       </div>
-      <div className=""></div>
+      <div className="ProjectContainer">
+        <Project/>
+      </div>
     </section>
   );
 };
