@@ -13,10 +13,11 @@
 .projectSection {
   background-color: black;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   transform: translateY(100%);
   transition: transform 1s ease;
+  overflow: hidden;
 
   &.slide-in {
     transform: translateY(0);
@@ -30,7 +31,6 @@
     align-items: center;
     margin-top: 1rem;
     color: white;
-
     h1 {
       font-size: 3rem;
     }
@@ -39,8 +39,4 @@
   .animate-delay-1s {
     animation-delay: 1s;
   }
-}
-
-.ProjectContainer {
-  margin: 1rem;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/pages/Projects.scss";
 import "animate.css";
-import Project from "../../components/NewPortfolio/Project";
+import Grid from "../../components/NewPortfolio/project/Grid";
 
 interface ProjectsProps {
   show: boolean;
@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({ show }) => {
         </h1>
       </div>
       <div className="ProjectContainer">
-        <Project/>
+        <Grid />
       </div>
     </section>
   );

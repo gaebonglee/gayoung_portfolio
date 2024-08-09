@@ -18,6 +18,14 @@ const ChangePages: React.FC = () => {
     }
   }, [currentPage]);
 
+  useEffect(() => {
+    if (currentPage === "main") {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [currentPage]);
+
   const handleIntroNextClick = () => {
     setSlideIn(false);
     setTimeout(() => {

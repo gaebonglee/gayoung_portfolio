@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import "../../style/NewPortfolio/Project.scss";
-import { projects, ProjectType } from "../../data/projects";
+import "../../../style/NewPortfolio/Project.scss";
+import { projects, ProjectType } from "../../../data/projects";
 import ProjectDetail from "./ProjectDetail";
 
+
 const Project: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null
+  );
 
   const handleCardClick = (project: ProjectType) => {
     setSelectedProject(project);

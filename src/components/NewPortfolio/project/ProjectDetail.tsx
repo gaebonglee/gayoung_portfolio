@@ -1,6 +1,6 @@
 import React from "react";
-import { projects, ProjectType } from "../../data/projects";
-import "../../style/NewPortfolio/ProjectDetail.scss";
+import { projects, ProjectType } from "../../../data/projects";
+import "../../../style/NewPortfolio/project/ProjectDetail.scss";
 
 interface ProjectDetailProps {
   project: ProjectType;
@@ -12,7 +12,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
     <div className="back">
       <div className="project_detail">
         <div className="closeBtn">
-
           <button onClick={onClose}>Close</button>
         </div>
 
