@@ -11,6 +11,7 @@ export interface ProjectType {
   frontEnd: boolean;
   backEnd: boolean;
   gridPosition: string;
+  index?: number;
 }
 
 export const projects = [
@@ -139,6 +140,6 @@ export const projects = [
     design: false,
     frontEnd: true,
     backEnd: false,
-    gridPosition: "grid__cell-c4-r4",
+    gridPosition: "grid__cell-c3-r3",
   },
 ];

@@ -1,6 +1,6 @@
 .grid__cell {
-	display: grid;
-	align-items: end;
+  display: grid;
+  align-items: end;
 }
 
 .grid__cell-img {
@@ -15,10 +15,8 @@
   overflow: hidden;
 }
 
-.grid__cell-img-inner {
-  background-size: cover;
-  background-position: 50% 50%;
+.grid__cell-img-inner img {
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  object-fit: cover;
 }
