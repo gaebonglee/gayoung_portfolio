@@ -35,14 +35,19 @@ const Grid: React.FC = () => {
       return;
     }
 
-    // Calculate scale and position
-    const scale = (window.innerWidth * 0.5) / cellElement.offsetWidth;
-    const x =
-      window.innerWidth / 2 -
-      (cellElement.getBoundingClientRect().left + cellElement.offsetWidth / 2);
-    const y =
-      window.innerHeight / 2 -
-      (cellElement.getBoundingClientRect().top + cellElement.offsetHeight / 2);
+    const targetX = window.innerWidth * 0.8;
+    const targetY = window.innerHeight * 0.2;
+
+    // 현재 카드의 중앙 좌표
+    const cardRect = cellElement.getBoundingClientRect();
+    const currentX = cardRect.left + cardRect.width / 2;
+    const currentY = cardRect.top + cardRect.height / 2;
+
+    // 이동해야 할 거리 계산
+    const x = targetX - currentX;
+    const y = targetY - currentY;
+
+    const scale = 1.5; 
 
     gsap
       .timeline({

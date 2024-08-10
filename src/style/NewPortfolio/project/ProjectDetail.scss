@@ -1,8 +1,16 @@
 @import "../../common.scss";
 
+.content_container {
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+}
+
 .project_detail {
   display: flex;
   flex-direction: column;
+  padding: 3rem;
+  justify-content: center;
 }
 .closeBtn {
   display: flex;
@@ -18,6 +26,29 @@
   }
 }
 .cardContent {
+  .myWork_wrap {
+    display: flex;
+    gap: 1rem;
+
+    .myWork {
+      font-weight: 700;
+      padding: 1rem;
+      border-radius: 1.5rem;
+
+      &.true {
+        border: 2px solid $neonblue2;
+        background-color: $neonblue2;
+        color: $neonblue1;
+      }
+
+      &.false {
+        border: 2px solid white;
+        background-color: rgba(255, 255, 255, 0.212);
+        color: white;
+      }
+    }
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,27 +111,19 @@
       }
     }
   }
-
-  .myWork_wrap {
-    display: flex;
-    gap: 1rem;
-
-    .myWork {
-      font-weight: 700;
-      padding: 1rem;
-      border-radius: 1.5rem;
-
-      &.true {
-        border: 2px solid $neonblue2;
-        background-color: $neonblue2;
-        color: $neonblue1;
-      }
-
-      &.false {
-        border: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.212);
-        color: white;
-      }
+}
+.contentImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  .imgWrap {
+    width: 30rem;
+    height: 30rem;
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
     }
   }
 }
