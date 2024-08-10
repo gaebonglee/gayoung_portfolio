@@ -83,10 +83,11 @@ const Grid: React.FC = () => {
           />
         ))}
       </div>
-      <div className="content"></div>
-      {selectedProject && (
-        <ProjectDetail project={selectedProject} onClose={closeContent} />
-      )}
+      {/* <div className="content">
+        {selectedProject && (
+          <ProjectDetail project={selectedProject} onClose={closeContent} />
+        )}
+      </div> */}
     </section>
   );
 };

@@ -15,11 +15,14 @@ const ImageCell: React.FC<ImageCellProps> = ({ project, index, onClick }) => {
       scale: 0.95,
       duration: 0.8,
       ease: "expo.out",
+
+      
     });
     gsap.to(`.grid__cell-img-inner-${index}`, {
-      scale: 1.1,
+      scale: 0.95,
       duration: 0.8,
       ease: "expo.out",
+
     });
   };
 

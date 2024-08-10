@@ -15,8 +15,10 @@
   overflow: hidden;
 }
 
-.grid__cell-img-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid__cell-img-inner {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

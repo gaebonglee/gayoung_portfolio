@@ -1,3 +1,7 @@
+.gallery {
+  background-color: black;
+}
+
 .grid {
   display: grid;
   --grid-border-radius: 8px;
@@ -10,25 +14,18 @@
   --grid-padding: 0.5vw;
 }
 
-//--grid mini, 좌측 하단에 위치 하는 부분--\\
-
-.grid--mini {
-	width: 220px;
-	height: 190px;
-	--grid-padding: 1px;
-    margin-bottom: 3vh;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-}
-
-
 .content {
-  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15vh 15vw 0;
+  z-index: 1000;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 //--------------------------media--------------------\\
 @media screen and (min-width: 53em) {
