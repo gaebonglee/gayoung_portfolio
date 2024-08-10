@@ -13,6 +13,13 @@ const Grid: React.FC = () => {
   const handleCardClick = (project: ProjectType, index: number) => {
     setSelectedProject({ ...project, index });
     showContent(index);
+
+    const gridCells = document.querySelectorAll(".grid__cell");
+    gridCells.forEach((cell, cellIndex) => {
+      if (cellIndex !== index) {
+        cell.classList.add("grid__cell--hidden");
+      }
+    });
   };
 
   const showContent = (index: number) => {
@@ -52,6 +59,10 @@ const Grid: React.FC = () => {
 
   const closeContent = () => {
     if (!selectedProject) return;
+    const gridCells = document.querySelectorAll(".grid__cell");
+    gridCells.forEach((cell) => {
+      cell.classList.remove("grid__cell--hidden");
+    });
 
     gsap
       .timeline({
@@ -83,11 +94,11 @@ const Grid: React.FC = () => {
           />
         ))}
       </div>
-      {/* <div className="content">
+      <div className="content">
         {selectedProject && (
           <ProjectDetail project={selectedProject} onClose={closeContent} />
         )}
-      </div> */}
+      </div>
     </section>
   );
 };

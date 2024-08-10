@@ -1,33 +1,37 @@
 @import "../../common.scss";
 
-.content__item {
-  position: absolute;
-  opacity: 0;
-  display: grid;
+.project_detail {
+  display: flex;
+  flex-direction: column;
 }
-.content__item--current {
-  opacity: 1;
-  position: relative;
-  pointer-events: auto;
-}
-
 .closeBtn {
-  padding: 1rem;
+  display: flex;
+  justify-content: left;
   button {
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 1rem;
+    padding-bottom: 1rem;
     background-color: black;
     color: white;
+    font-size: 2rem;
   }
 }
 .cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .titleWrap {
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
     p {
       font-size: 3rem;
       font-weight: 800;
+      margin: 0;
+      padding: 2rem 0 1rem 0;
     }
     a {
       font-size: 1.5rem;
@@ -39,8 +43,9 @@
     color: white;
   }
   .description {
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.4;
+    margin-bottom: 1rem;
   }
 
   .card_inner {
@@ -55,6 +60,7 @@
   }
 
   .linkWrap {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
