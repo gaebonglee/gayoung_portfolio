@@ -10,10 +10,13 @@ const Grid: React.FC = () => {
     null
   );
   const [showDetail, setShowDetail] = useState(false);
+  const [resetAnimation, setResetAnimation] = useState(false);
 
   useEffect(() => {
-    showGridImg();
-  }, []);
+    if (!resetAnimation) {
+      showGridImg();
+    }
+  }, [resetAnimation]);
 
   const showGridImg = () => {
     const gridCells = document.querySelectorAll(
@@ -29,7 +32,7 @@ const Grid: React.FC = () => {
         duration: 0.8,
         ease: "power2.out",
         stagger: {
-          each: 0.1,
+          amount: 0.8,
           from: "random",
         },
       }
@@ -43,18 +46,18 @@ const Grid: React.FC = () => {
     ) as NodeListOf<HTMLElement>;
 
     gsap.to(gridCells, {
-      duration: 1,
+      duration: 0.8,
       opacity: 0,
       y: 40,
       ease: "power1.inOut",
       stagger: {
-        amount: 1,
+        amount: 0.8,
         from: "center",
         grid: "auto",
       },
       onComplete: () => {
         setShowDetail(true);
-        showContent(index);
+        setTimeout(() => showContent(index), 100);
       },
     });
   };
@@ -90,7 +93,8 @@ const Grid: React.FC = () => {
       onComplete: () => {
         setSelectedProject(null);
         setShowDetail(false);
-        showGridImg();
+        setResetAnimation(true);
+        setTimeout(() => setResetAnimation(false), 0);
       },
     });
   };

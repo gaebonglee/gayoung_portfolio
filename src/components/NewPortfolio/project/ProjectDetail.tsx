@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { projects, ProjectType } from "../../../data/projects";
 import "../../../style/NewPortfolio/project/ProjectDetail.scss";
 import { HiArrowLongLeft } from "react-icons/hi2";
+import classNames from "classnames";
 
 interface ProjectDetailProps {
   project: ProjectType;
@@ -9,6 +10,16 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
+  const [isExiting, setIsExiting] = useState(false);
+
+  const handleExit = () => {
+    setIsExiting(true);
+
+    setTimeout(() => {
+      onClose();
+    }, 800);
+  };
+
   return (
     <div className="content_container">
       <div className="project_detail">

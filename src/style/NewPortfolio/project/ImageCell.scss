@@ -16,9 +16,11 @@
 }
 
 .grid__cell-img-inner {
+  border-radius: var(--grid-border-radius);
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: var(--grid-border-radius);
   }
 }
