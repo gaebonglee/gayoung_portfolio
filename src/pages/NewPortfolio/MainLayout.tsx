@@ -45,7 +45,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
     setShowProjects(true);
     setTimeout(() => {
       onNextClick();
-    }, 100); 
+    }, 100);
   };
 
   return (
@@ -57,25 +57,25 @@ const MainLayout: React.FC<MainLayoutProps> = ({ show, onNextClick }) => {
         <div className="horizontal-line bottom"></div>
         <div className="icon-container">
           <div
-            className="icon-item"
+            className={`icon-item ${selected === "profile" ? "active" : ""}`}
             id="item1"
             onClick={() => handleIconClick("profile")}
           >
-            <Icon type="profile" />
+            <Icon type="profile" isActive={selected === "profile"} />
           </div>
           <div
-            className="icon-item"
+            className={`icon-item ${selected === "skills" ? "active" : ""}`}
             id="item2"
             onClick={() => handleIconClick("skills")}
           >
-            <Icon type="skills" />
+            <Icon type="skills" isActive={selected === "skills"} />
           </div>
           <div
-            className="icon-item"
+            className={`icon-item ${selected === "info" ? "active" : ""}`}
             id="item3"
             onClick={() => handleIconClick("info")}
           >
-            <Icon type="info" />
+            <Icon type="info" isActive={selected === "info"} />
           </div>
           <div className="icon-item" id="item4">
             <Github />

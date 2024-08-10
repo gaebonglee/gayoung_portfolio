@@ -3,9 +3,10 @@ import "../../../style/NewPortfolio/me/Icon.scss";
 
 interface IconProps {
   type: "profile" | "skills" | "info";
+  isActive: boolean;
 }
 
-const Icon: React.FC<IconProps> = ({ type }) => {
+const Icon: React.FC<IconProps> = ({ type, isActive }) => {
   let content;
   switch (type) {
     case "profile":
@@ -21,7 +22,11 @@ const Icon: React.FC<IconProps> = ({ type }) => {
       content = null;
   }
 
-  return <div className={`icon ${type}_wrap`}>{content}</div>;
+  return (
+    <div className={`icon ${type}_wrap ${isActive ? "active" : ""}`}>
+      {content}
+    </div>
+  );
 };
 
 export default Icon;
