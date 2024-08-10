@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { projects, ProjectType } from "../../../data/projects";
 import "../../../style/NewPortfolio/project/ProjectDetail.scss";
 import { HiArrowLongLeft } from "react-icons/hi2";
-import classNames from "classnames";
 
 interface ProjectDetailProps {
   project: ProjectType;
@@ -12,12 +11,35 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
   const [isExiting, setIsExiting] = useState(false);
 
+  useEffect(() => {
+    const projectDetail = document.querySelector(".project_detail");
+    const contentImg = document.querySelector(".contentImg");
+
+    if (contentImg) {
+      setTimeout(() => {
+        contentImg.classList.add("enter-animation");
+      }, 0);
+    }
+    if (projectDetail) {
+      setTimeout(() => {
+        projectDetail.classList.add("enter-animation");
+      }, 300); 
+    }
+  }, []);
+
   const handleExit = () => {
     setIsExiting(true);
+    const projectDetail = document.querySelector(".project_detail");
+    const contentImg = document.querySelector(".contentImg");
 
-    setTimeout(() => {
-      onClose();
-    }, 800);
+    if (projectDetail && contentImg) {
+      projectDetail.classList.add("exit-animation");
+      contentImg.classList.add("exit-animation");
+
+      setTimeout(() => {
+        onClose();
+      }, 1000);
+    }
   };
 
   return (
