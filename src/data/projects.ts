@@ -49,11 +49,12 @@ export const projects = [
   {
     title: "Portfolio",
     subTitle: "WebSite",
-    description: "웹사이트 기준으로 제작된 포트폴리오 사이트입니다.",
-    period: "2024.06.14 ~ 2024.06.21",
+    description:
+      "웹사이트 기준으로 제작된 포트폴리오 사이트입니다.(반응형 업데이트 예정)",
+    period: "2024.08.04 ~ 2024.08.11",
     tech: "React, TypeScript, Scss, react-hook, react-slick, gsap",
 
-    image: `${process.env.PUBLIC_URL}/image/project/myportfolio.png`,
+    image: `${process.env.PUBLIC_URL}/image/project/portfolio.png`,
     projectLink: "https://gaebonglee.github.io/gayoung_portfolio/",
     githubLink: "https://github.com/gaebonglee/gayoung_portfolio.git",
     design: true,
